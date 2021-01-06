@@ -10,6 +10,7 @@ end
 
 def valid? 
   #if self.sender.valid? && self.receiver.valid?
+  if sender.valid? && receiver.valid?
     true 
   else
     false 
