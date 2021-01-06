@@ -18,8 +18,8 @@ def valid?
 end 
 
 def execute_transaction
-  if  ! self.valid?
-    @status = "rejected" || @sender.balance < @amount
+  if  ! self.valid? || @sender.balance < @amount
+    @status = "rejected" 
       return "Transaction rejected. Please check your account balance."
       elsif
        @status == "complete"
